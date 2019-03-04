@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ - File: layout_alarmclock.xml
+ - Version: 0.0.1
+ - Date: 2019-02-23
+ - Author: Andrea Deidda
+ - License:
+ -
+ - History:
+ - Author           || Date         || Description
+ - Andrea Deidda    || 2019-02-23   || creating file and header
+ - Andrea Deidda    || 2019-02-25   || Update file
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_height="wrap_content"
+                android:id="@+id/alarmclock_container"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:background="@color/colorSecondaryAccent"
+                android:padding="16dp" android:layout_width="match_parent">
+    <!-- Entet time, Enter date-->
+    <TextView
+            android:text="@string/enterdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textEnterDate"
+            tools:text="Enter date (yyyy/mm/dd)"
+            tools:targetApi="o"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"/>
+    <TextView
+            android:text="@string/entertime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textEnterTime"
+            android:padding="2dp"
+            android:textStyle="bold"
+            tools:text="Enter time (hh:mm)"
+            android:gravity="start"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/editDay"
+            android:layout_marginTop="10dp"/>
+    <!-- Button -->
+    <Button
+            android:text="@string/setalarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/setButton"
+            tools:text="SET ALARM"
+            android:layout_below="@+id/textDotPoint"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:textStyle="normal"/>
+    <!-- Minutes and Hours-->
+    <EditText
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:labelFor="@id/editHour"
+            android:autofillHints=""
+            android:id="@+id/editHour"
+            tools:targetApi="o"
+            android:layout_width="46dp"
+            android:layout_below="@+id/textEnterTime"
+            android:layout_toStartOf="@+id/textDotPoint"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"/>
+    <EditText
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/editMinutes"
+            android:labelFor="@id/editMinutes"
+            android:ems="10"
+            android:autofillHints=""
+            tools:targetApi="o"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/textDotPoint"
+            android:layout_width="46dp"
+            android:layout_below="@+id/textEnterTime"
+            android:textAlignment="center"/>
+    <!-- Year, Month and Day-->
+    <EditText
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:id="@+id/editDay"
+            android:autofillHints=""
+            tools:targetApi="o"
+            android:labelFor="@id/editDay"
+            android:layout_toEndOf="@+id/textSlash"
+            android:layout_below="@+id/textEnterDate"
+            android:textAlignment="center"/>
+    <EditText
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:autofillHints=""
+            android:ems="10"
+            android:labelFor="@id/editMonth"
+            android:id="@+id/editMonth"
+            android:layout_below="@+id/textEnterDate"
+            tools:targetApi="o"
+            android:layout_toEndOf="@+id/textSlash2"
+            android:textAlignment="center"/>
+    <EditText
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:autofillHints=""
+            android:labelFor="@id/editYear"
+            android:id="@+id/editYear"
+            android:layout_below="@+id/textEnterDate"
+            tools:targetApi="o"
+            android:layout_toStartOf="@+id/textSlash2"
+            android:textAlignment="center"/>
+    <!-- / / -->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/slash"
+            android:id="@+id/textSlash2"
+            tools:text=" / "
+            android:layout_below="@+id/textEnterDate"
+            android:layout_centerInParent="true" android:layout_marginTop="13dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/slash"
+            android:id="@+id/textSlash"
+            tools:text=" / "
+            android:layout_toEndOf="@+id/editMonth"
+            android:layout_below="@+id/textEnterDate" android:layout_marginTop="13dp"/>
+    <!-- : -->
+    <TextView
+            android:text="@string/dotpoint"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/textDotPoint"
+            android:padding="2dp"
+            tools:text=" : "
+            android:textStyle="bold"
+            android:layout_below="@+id/textEnterTime"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"/>
+</RelativeLayout>

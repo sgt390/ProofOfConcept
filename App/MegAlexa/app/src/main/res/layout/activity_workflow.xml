@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+        * File activity_workflow.kt
+        * Version: 1.0.0
+        * Date: 2019-02-16
+        * Author: Stefano Zanatta
+        *         Ludovico Brocca
+        * License:
+        *
+        * History:
+        * Author                || Date         || Description
+        * Stefano Zanatta       || 2019-02-12   || Structure for activity visualization
+        * Ludovico Brocca       || 2019-02-24   || Structure for workflow visualization
+        */
+
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/relativeLayout">
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:background="@color/colorPrimary"
+            tools:context=".activities.GeneralLoggedActivity">
+        <Button
+                android:layout_width="91dp"
+                android:layout_height="87dp"
+                android:id="@+id/add_workflow"
+                android:background="@drawable/ic_add_circle_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+        />
+        <TextView
+                android:text="@string/title_workflow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="parent" android:textSize="30sp"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:layout_width="395dp"
+                android:layout_height="641dp"
+                android:id="@+id/container_workflow" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                android:scrollbars="vertical"
+                android:orientation="horizontal"
+                android:descendantFocusability="blocksDescendants"
+
+        />
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

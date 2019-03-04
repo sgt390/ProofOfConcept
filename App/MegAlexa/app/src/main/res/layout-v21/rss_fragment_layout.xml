@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/rss_fragment_container"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:padding="16dp"
+              android:orientation="vertical"
+              tools:openDrawer="start"
+              android:background="@color/colorSecondaryAccent"
+              android:gravity="start"
+
+>
+
+    <TextView
+            android:id="@+id/Url"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:labelFor="@+id/Url"
+            android:textStyle="bold"
+            android:text="@string/insert_url" tools:text="Insert URL"
+            android:hint="@string/insert_url_hint"
+            android:padding="2dp"
+    />
+
+
+    <EditText
+            android:id="@+id/insert_URL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/insert_URL"
+            android:layout_marginTop="8dp"
+            android:inputType="textUri"
+            android:autofillHints=""
+            tools:targetApi="o"
+    />
+
+    <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:layout_marginTop="8dp"
+
+
+    />
+</LinearLayout>
+
+

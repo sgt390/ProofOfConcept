@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="nav_view">
+
+    <item
+            android:id="@+id/text_username"
+            android:title="@string/todo"/>
+    <item
+            android:id="@+id/text_lastname"
+            android:title="@string/todo"/>
+    <item
+            android:id="@+id/text_email"
+            android:title="@string/todo"/>
+    <item
+            android:id="@+id/menu_quit"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="Exit"/>
+
+
+</menu>

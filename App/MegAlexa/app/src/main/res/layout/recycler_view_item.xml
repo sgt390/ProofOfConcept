@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/itemLayout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_gravity="center_horizontal"
+              android:padding="5dp"
+>
+
+    <ImageView
+            android:id="@+id/block_logo"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_mr_button_connected_10_light"
+            android:contentDescription="TODO">
+    </ImageView>
+
+    <TextView
+            android:id="@+id/block_label"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:textSize="40sp"
+            android:textAlignment="center"
+    >
+
+    </TextView>
+
+</LinearLayout>
